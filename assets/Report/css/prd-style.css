@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "Andika";
+    src: url('https://fonts.googleapis.com/css?family=Andika');
+}
+
+html {
+    height: 100% !important;
+    width: 100%;
+}
+
+body {
+    height: 100% !important;
+    width: 100%;
+    grid-template-columns: 1;
+}
+
+.head-report {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+
+.bnt-headdate {
+    align-self: center;
+    justify-self: self-end;
+}
+
+.bnt-date {
+    border: 2px solid #0089c3;
+    background-color: transparent;
+}
+
+#report-foot {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    margin-left: 2.5%;
+    width: 95%;
+}
+
+#tabprd-list {
+    border: none;
+    font-family: "ABeeZee", "Andika", serif;
+}
+
+#tabprd-list>thead>tr {
+    border: 3px solid #ced2d8;
+    background: #0178bce0;
+    color: wheat;
+    text-align: center;
+}
+
+#tabprd-list>thead>tr>th>i {
+    font-size: 22px;
+    margin: 0px 12px 0 5px;
+}
+
+#tabprd-list tr>*:nth-child(1) {
+    width: 40%;
+    font-weight: 600;
+}
+
+#tabprd-list tr>*:nth-child(2) {
+    width: 10%;
+}
+
+#tabprd-list tr>*:nth-child(3) {
+    width: 20%;
+    text-align: center;
+}
+
+#tabprd-list tr>*:nth-child(4) {
+    width: 10%;
+    text-align: center;
+}
+
+#tabprd-list tbody tr>*:nth-child(5) {
+    text-align: -webkit-center;
+}
+
+.adownload {
+    display: block;
+    background: #1f88c4;
+    width: 45px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid #67757c;
+    border-radius: 5px;
+    padding: 3px 0 2px 0;
+    color: white !important;
+    cursor: pointer;
+}
+
+.adownload:hover {
+    background: #7cc3ec;
+}
+
+.lookup-circle.lookup-right::before {
+    color: black;
+    font-weight: 700;
+}
+
+.box-header>.box-tools,
+.box-header>.box-controls {
+    top: 0.4rem;
+}
+
+@media (min-width: 1392px) {
+    #report-foot {
+        margin-left: 14%;
+    }
+}

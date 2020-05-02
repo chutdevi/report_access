@@ -1,0 +1,418 @@
+    @import url('https://fonts.googleapis.com/css?family=Muli:400,800&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
+
+    :root{
+        --span-border-colot:black;
+    }
+
+
+    .manage-mem-table {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .manage-mem-table thead,
+    .manage-mem-table tbody {
+        display: inherit;
+        min-width: 100%;
+        background: #ffffff52;
+        text-align: center;
+        border-collapse: separate;
+        border-spacing: 0px 5px;
+        justify-items: center;
+        /* align-items: center; */
+    }
+    
+    .manage-mem-table thead {
+        border-radius: 6px 6px 0 0;
+        width: 100%;
+    }
+    
+    .manage-mem-table thead th {
+        cursor: pointer;
+    }
+    
+    .manage-mem-table thead th:focus {
+        outline: none;
+    }
+    
+    .manage-mem-table tbody {
+        flex-direction: column;
+        border-radius: 0 0 6px 6px;
+        margin-top: 5px;
+        min-height: 70vh;
+        height: auto;
+    }
+    
+    .manage-mem-table tbody tr {
+        color: black;
+        font-family: "Francois One", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        transition: background 0.8s linear;
+    }
+    .manage-mem-table tbody tr td {
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+    }    
+    .manage-mem-table tbody tr:hover {
+        background: #adcedad1; 
+    }
+    
+    .manage-mem-table tr {
+        display: inherit;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+        color: white;
+        font-family: 'Muli', sans-serif;
+        font-size: 15px;
+        font-weight: 200;
+        width: 100%;
+    }
+    
+    .manage-mem-table tr>*:nth-child(1) {
+        width: 15%;
+    }
+    
+    .manage-mem-table tr>*:nth-child(2) {
+        width: 5%;
+    }
+    
+    .manage-mem-table tr>*:nth-child(3) {
+       
+        width: 25%;
+    }
+    
+    .manage-mem-table tr>*:nth-child(4) {
+        width: 15%;
+    }
+    
+    .manage-mem-table tr>*:nth-child(5) {
+        /* text-align: left; */
+        width: 30%;
+    }
+    .manage-mem-table tr>*:nth-child(6) {
+        /* text-align: left; */
+        width: 10%;
+    }    
+    .manage-mem-table tr:last-child {
+        border: none;
+    }
+
+    .manage-mem-table tr td:nth-child(2) p {
+        width: 115px;
+        background: #1cb785;
+        margin: 0 auto;
+        border-radius: 3px;
+        box-shadow: 2px 2px 3px #00000073;
+    }
+    
+    .manage-mem-table tr td:nth-child(2) p {
+        color: blanchedalmond;
+        background: linear-gradient(45deg, #745a22, #5e616096);
+    }
+    
+    .manage-mem-table tr td:nth-child(2) p[group="0"] {
+        color: black;
+        background: linear-gradient(45deg, #0cd678, #86fbe096);
+    }
+    
+    .manage-mem-table tr td:nth-child(2) p[group="null"] {
+        color: blanchedalmond;
+        background: linear-gradient(45deg, #e70d6f, #86fbe096);
+    }
+    
+    .manage-mem-table tr td:nth-child(2) p[group="3"] {
+        color: blanchedalmond;
+        background: linear-gradient(45deg, #456bdb, #86fbe096);
+    }
+    
+    .manage-mem-table tr td:nth-child(2) p[group="2"] {
+        color: black;
+        background: linear-gradient(45deg, #e8ec0cdc, #ee8a07ac);
+    }
+
+    .manage-mem-table tr td:nth-child(2) p[group="2"] {
+        color: black;
+        background: linear-gradient(45deg, #e8ec0cdc, #ee8a07ac);
+    }
+    .manage-mem-table tr td:nth-child(3){
+        text-align: left;
+    }
+
+
+    .manage-mem-table tr td:nth-last-child(2){
+        justify-content: flex-start;
+        height: 100%;
+    }    
+    .manage-mem-table tr td:nth-last-child(2) button{
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;        
+        width: 45px;
+        height: 45px;
+        border: 2px solid var(--span-border-colot);
+        margin: 0 5px 0 5px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: width 1s, opacity 1s ease-in;
+    } 
+    .manage-mem-table tr td:nth-last-child(2) button i{
+        display: flex;
+        height: 41px;
+        width: 43px;
+        align-items: center;
+        justify-content: center;
+        background:var(--span-border-colot);
+        color: white;
+    } 
+
+    .manage-mem-table tr td:nth-last-child(2) button p{
+        margin: 0;
+        opacity: 0;
+        /* transition: visibility 0s, opacity 1s ease-in;  */
+    }   
+    .manage-mem-table tr td:nth-last-child(2) button span{
+        display: none;
+        border-left: 2px solid var(--span-border-colot);
+        /* display: flex; */  
+        height: 41px;
+        width: 150px;
+        align-items: center;
+        justify-content: center; 
+    }    
+    
+    .manage-mem-table tr td:nth-last-child(2) button:hover{
+        width: 187px;
+    }
+    .manage-mem-table tr td:nth-last-child(2) button:hover span{ 
+        display: inline-flex;
+    }
+    .manage-mem-table tr td:nth-last-child(2) button:hover p{
+        animation-name: show-text;
+        animation-duration: 0.8s;
+        animation-timing-function: linear;
+        animation-delay: 0.4s;
+        animation-fill-mode: forwards; 
+    }
+
+    .manage-mem-table tr td:nth-last-child(2) .td-button{
+        position: absolute; 
+        /* width: 100%; */
+        /* padding-left: 45px; */
+    }
+ 
+    .manage-mem-table tr td:nth-last-child(2) button[name="setting"]{
+        border: 2px solid var(--span-border-colot);
+        --span-border-colot: #049423d1;
+    }    
+    .manage-mem-table tr td:nth-last-child(2) button[name="comment"]{ 
+        border: 2px solid var(--span-border-colot);
+        --span-border-colot: #fd0048bd;
+    } 
+    .manage-mem-table tr td:nth-last-child(2) button[name="lockuse"]{
+        border: 2px solid var(--span-border-colot);
+        --span-border-colot: #0423bebf;
+    }
+    .manage-mem-table tr td:nth-last-child(2) button[name="baduser"]{ 
+        border: 2px solid var(--span-border-colot);
+        --span-border-colot: #ff2f2fcd;
+    }        
+    .manage-mem-table tr td:last-child i[name="status"]{
+        border: none;
+        border-radius: 19px;
+        width: 25px;
+        background: transparent;
+        color: transparent;
+        /* margin: 0 15px 0 15px;  */
+        font-size: 25px;
+        animation-name: blink;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        
+        /* animation-direction: alternate; */
+        /* animation-fill-mode: forwards; */
+    }   
+    .manage-mem-table tr td:last-child .td-status{
+        /* position: absolute; */
+        right: 0
+    }   
+    .online{
+        --coloe-status: rgb(33, 246, 76);
+        transition: --coloe-status 0.8s ease-in;
+    }
+    .offline{
+        --coloe-status: rgb(246, 33, 79);
+        transition: --coloe-status 0.8s ease-in;
+    }
+    .hide{
+        display: none !important;
+    }
+    @keyframes blink {
+        from   {color:var(--coloe-status);} 
+        to     {color: transparent;} 
+    }
+    @keyframes show-text {
+        from   {opacity:0;} 
+        to     {opacity: 1;} 
+    }
+
+
+    .manage-mem-table tbody tr {
+        height: 95px;
+        border-bottom: 2px solid rgba(245, 245, 245, 0.516);
+    }
+ 
+    
+
+    .manage-mem-table tbody tr td img {
+        cursor: pointer;
+        height: 75px;
+        width: 70px;
+        border-radius: 5px;
+        background: white;
+        transition: margin-top 0.7s, transform 0.8s;
+    }  
+
+    .manage-mem-table tbody tr td img:hover { 
+        transform: scale(1.5);
+    }  
+    .manage-mem-table tbody tr:first-child td img:hover {
+        position: absolute;
+        margin-top: 10px;
+        z-index:8;
+        transform: scale(1.5);
+    } 
+
+    /* Data */ 
+    .table-scall {
+        padding: 0px 1px 0px 0px;
+    }
+    /* }
+    .dataTables_scrollHead .table-scall {
+        padding: 0px 4px 0px 0px;
+    } */
+    
+    #ftable {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #ftable .dataTables_length {
+        display: flex;
+    }
+    
+    #ftable .dataTables_length>label {
+        display: flex;
+        color: whitesmoke;
+    }
+    
+    #ftable .dataTables_length label>select {
+        margin: 0 5px;
+        font-size: 14px;
+        padding: 0 20px;
+        height: 21px;
+    }
+    #ftable .dataTables_length label>select:focus {
+        outline: none;
+    }    
+    #ftable #DataTables_Table_0_paginate .pagination li{
+        z-index: 5;
+        border-radius: 5px;
+    }
+
+    #ftable #DataTables_Table_0_paginate .pagination li.active{
+        z-index: 0;
+        outline: none;
+        /* background: wheat; */
+    }
+    .page-link:focus { 
+        box-shadow:none !important;
+      }
+
+    .dataTables_scrollBody .table-scall {
+        margin-top: -5px;
+    }
+    
+    #mam-style .dataTables_scrollBody{
+        margin-top: 5px;
+    }
+    
+    #mam-style .dataTables_scrollBody::-webkit-scrollbar {
+        border-radius: 25px 25px 0 0;
+        width: 4px;
+    }
+    
+    #mam-style .dataTables_scrollBody::-webkit-scrollbar-track {
+        background: #ffffff00;
+    }
+    
+    #mam-style .dataTables_scrollBody::-webkit-scrollbar-thumb {
+        background: rgba(158, 235, 239, 0.55);
+        border-radius: 100px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1.5s linear;
+    }
+    
+    #mam-style .dataTables_scrollBody::-webkit-scrollbar-button {
+        border-radius: 25px 25px 0 0;
+        height: 0px;
+        background: rgba(218, 29, 29, 0.211);
+    }
+    
+    #mam-style .dataTables_scrollBody::-webkit-scrollbar-thumb:hover {
+        background: rgba(28, 28, 228, 0.687);
+    }
+    
+    #mam-style .dataTables_scroll:hover .dataTables_scrollBody::-webkit-scrollbar-thumb {
+        visibility: visible;
+        opacity: 6;
+    }
+
+    /* .manage-mem-table tr>*:nth-child(6){ 
+   text-align: center; transition: none;
+} */
+    
+    @media (max-width:1400px) {
+        .dataTables_scrollBody {
+            height: 57vh;
+        }
+        .manage-mem-table tr td:nth-last-child(2) button{
+            transition: none;
+        }
+        .manage-mem-table tr td:nth-last-child(2) button:hover{
+            width: 45px;
+        }
+        .manage-mem-table tr td:nth-last-child(2) button:hover span{ 
+            display: none;
+        }
+        .manage-mem-table tr td:nth-last-child(2) button:hover p{
+            display: none;
+        }   
+        .manage-mem-table tr>*:nth-child(2) {
+            width: 10%;
+        } 
+        .manage-mem-table tr>*:nth-child(3) { 
+            width: 25%;
+        }    
+        .manage-mem-table tr>*:nth-child(5) { 
+           text-align: center;
+        }   
+        .manage-mem-table tbody tr:last-child td img:hover {
+            position: absolute;
+            margin-bottom: 15px;
+            z-index:8;
+            transform: scale(1.5);
+        }     
+        
+
+    }

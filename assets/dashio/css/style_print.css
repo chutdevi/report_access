@@ -1,0 +1,78 @@
+/**
+* Template Name: Dashio
+* Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+* Author: TemplateMag.com
+* License: https://templatemag.com/license/
+*/
+/*
+Template Name: DASHIO - Bootstrap 3.1.1 Admin Theme
+Template Version: 1.0
+Author: Carlos Alvarez
+Website: http://Alvarez.is/
+*/
+
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+
+/* BASIC THEME CONFIGURATION */
+body {
+    color: #797979;
+	background: #eaeaea;
+    font-family: 'Ruda', sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size:13px;
+} 
+
+.modalprint-tab{
+    /* border: 2px solid black; */
+    width: 100%;
+    /* margin-left: 15px; */
+}
+
+.modalprint-tab>thead{
+    text-align: left;
+}
+.modalprint-tab thead tr{
+    height: 35px;
+    border-bottom: cadetblue solid 3px;
+ }
+ .modalprint-tab tr>*:nth-child(1){ width: 15%; }  
+ .modalprint-tab tr>*:nth-child(2){ width: 15%; }  
+ .modalprint-tab tr>*:nth-child(3){ width: 25%; }  
+ .modalprint-tab tr>*:nth-child(4){ width: 20%; } 
+ .modalprint-tab tr>*:nth-child(5){ width: 10%; text-align: right; padding-right: 5%;} 
+ .modalprint-tab tr>*:nth-child(6){ 
+    text-align: center;
+ } 
+.modalprint-tab tbody tr>*:nth-child(6) img{
+    margin: 0 auto;
+ }
+.modalprint-tab td{
+   padding: 8px 0px 10px
+}
+.printcontent{
+    width: 100%;
+    padding: 10px; 
+}
+
+.grid-main{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.headprint-grid h2{
+    border-bottom: cornflowerblue solid 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+@media print
+{
+    table.modalprint-tab       { page-break-after: auto; }
+    table.modalprint-tab tr    { page-break-inside:avoid; page-break-after: auto; }
+    table.modalprint-tab td    { page-break-inside:avoid; page-break-after:auto }
+    table.modalprint-tab thead { display:table-header-group }
+    table.modalprint-tab tfoot { display:table-footer-group }
+}
