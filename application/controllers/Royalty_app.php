@@ -49,8 +49,8 @@ class Royalty_app extends CI_Controller {
 
 		 $date_end   = date( 'Y/m/d', strtotime($date_deli[1]) ) ;
 
-//$date_start = date( 'Y/m/d', strtotime('2019-08-01') ) ;
-//$date_end = date( 'Y/m/d', strtotime('2019-08-31') ) ;
+		//$date_start = date( 'Y/m/d', strtotime('2019-08-01') ) ;
+		//$date_end = date( 'Y/m/d', strtotime('2019-08-31') ) ;
 
 
 		 $data['sm'] = $this->Backroyalty_model->get_data_bh($date_start, $date_end);	
@@ -61,7 +61,7 @@ class Royalty_app extends CI_Controller {
 		// echo ($_POST['sad']);
 		$flg = ( count($data['sm']) > 0 ) ? "complete" : "error" ;
 		echo json_encode( $flg );
-
+		
 	}
 	public function json_getdata_pl()
 	{

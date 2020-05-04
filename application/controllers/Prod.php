@@ -54,7 +54,6 @@ function prd()
 #-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= ajax
 private function getline_prod($url)
 {
-	//$url = "http://urlToYourJsonFile.com";
 	$json = file_get_contents($url);
 	$json_data = json_decode($json, true);
 	return $json_data;
