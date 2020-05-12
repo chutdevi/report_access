@@ -36,7 +36,7 @@
 	    //var table_cm = $('#demo-datatables-com').DataTable();
 	    if (date1.length > 0) {
 	        over_on();
-	        $('#tm_mer').html('กรุณา รอสักครู่...')
+	        $('#tm_mer').html('Please wait...')
 	            //$('#online-bar').html('')
 	            //$('#online-bar2').html('')
 	        $("h4[name=\"headchaer2\"]").html('Line of pd working per day')
@@ -419,7 +419,7 @@
 	        }).on('click', function(i, row) {
 	            console.log(i, row['PD']);
 	            over_on();
-	            $('#tm_mer').html('กรุณา รอสักครู่...'),
+	            $('#tm_mer').html('Please wait...'),
 	                chartOnlineworkdaysac(row['PD']),
 
 
@@ -722,27 +722,26 @@
 	            dataset[cm]["ITEM_CD"],
 	            dataset[cm]["DATA1"],
 	            dataset[cm]["DATA2"]
-	        ]).draw(true);
-
+	        ]).draw(true); 
 	    }
 	    over_off();
 	}
 
 	function over_on() {
-	    $('#com-sea').css("display", "none");
-	    $('#com-wai').show();
+		$('body').css("overflow-y", "hidden");
+	    // $('#com-sea').css("display", "none");
+	    // $('#com-wai').show();
 
 	    $('#myNav').css("width", "100%");
-	    $('#myNav').show();
-
+	    $('#myNav').show(); 
 	    //timeLoad() ;
 	    //myTimer = mTimer;
 	}
 
 	function over_off() {
-
-	    $('#com-wai').css("display", "none");
-	    $('#com-sea').show();
+		$('body').css("overflow-y", "auto");
+	    // $('#com-wai').css("display", "none");
+	    // $('#com-sea').show();
 
 	    $('#myNav').css("width", "0");
 	    $('#myNav').hide();

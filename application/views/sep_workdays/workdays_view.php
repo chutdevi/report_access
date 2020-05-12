@@ -37,7 +37,7 @@
 <?php include( "home/$header.php" );?>
 
     <div class="layout-main">
-      <div id="myNav" class="overlay" style="display:none; background-color: rgba(0,0,0,0.4);  position: fixed;" >
+      <div id="myNav" class="overlay" style="display:none; background-color: rgba(0,0,0);  position: fixed;" >
         <div class="overlay-content-com" style="text-align:center; top: 20%; margin-left: -2%;">
           <span class="label label-danger" id="tm_mer" >00:00:00</span>
         </div>

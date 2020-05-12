@@ -48,11 +48,22 @@ class Del_plan extends CI_Controller {
 		$intail['uid'] = $this->session->userdata('sessUsrId');
 		$intail['add'] = $this->session->userdata('sessAdd');
 		$intail['menu'] = $this->session->userdata('menu');
+
+		// $action = base64_decode($this->input->post('action'));
+
+		// if($action=='searchType')
+		// {
+		// 	$year = $this->input->post('year');
+		// 	$month = $this->input->post('month');
+
+		// 	echo $year."==>".$month;
+		// 	exit;
+		// }
 		
 		$this->template->write('page_title', $setTitle);
 		$this->template->write_view('page_header', 'home/header_v.php',$intail);				
 		//$this->template->write_view('page_menu', 'home/menu_v.php');
-		$this->template->write_view('page_content', 'content/del_plan_mta.php', $data);
+		$this->template->write_view('page_content', 'content/del_plan_mta.php');
 		$this->template->write_view('page_footer' , 'home/footer_v.php');
 		$this->template->render();
 

@@ -33,6 +33,7 @@ $months = array(
     <section class="content">
       <div class="row">
         <div class="col-12">
+        	<form method="GET" action="http://192.168.161.102/excel_gen/Del_plan/del_plan_report?year=year&month=month" enctype="multipart/form-data">
             <div class="box">
             <!-- <div class="box-header with-border">
               <div class="col-6">
@@ -46,6 +47,7 @@ $months = array(
 	                  <!-- <ul class="box-controls pull-right">Please select period time for export the report.</ul>                 -->
 	                  <ul class="box-controls pull-right">Report > Delivery Plan of MTA</ul>  
 	                </div>
+	                <?php //echo form_open_multipart('http://192.168.161.102/excel_gen/Del_plan/del_plan_report?year=year&month=month');?>
 	                <div class="box-body">
 	                  	<div class="row">
 	                    	<div class="col-lg-5 col-12"> 
@@ -119,15 +121,19 @@ $months = array(
 		                  	<div class="col-lg-2 col-12"> 
 		                  		<div class="form-group">
 		                  			<h5 class="text-right" style="color:white">CLICK HERE</h5>
-		                  			<button class="btn btn-social btn btn-bitbucket pull-right mb-5" data-original-title='DOWNLOAD' onclick="download_data();"><i class="fa fa-arrow-circle-o-down" ></i>DOWNLOAD</button>
+		                  			<button class="btn btn-social btn btn-bitbucket pull-right mb-5" data-original-title='DOWNLOAD' type='submit'><i class="fa fa-arrow-circle-o-down" ></i>DOWNLOAD</button>
+		                  			<!--  onclick="download_data();" -->
+		                  			<!-- <input type="hidden" name="action" value="<?php echo base64_encode('searchType');?>"  /> -->
 		                  		</div>
 		                  	</div>
 	                  		<div class="box-footer text-right">
 	                  		</div>
 	                	</div>
 	                </div>
+	                <?php //echo form_close(); ?>
 	          	</div>
 	        </div> 
+	    	</form>
       	</div>
    	</section>
 </div>
@@ -181,59 +187,60 @@ $months = array(
       });
     });
 
-    function download_data(){
-		var year = $("#year").val();			 
-		var month = $("#month").val();
+ //    function download_data()
+ //    {
+	// 	var year = $("#year").val();			 
+	// 	var month = $("#month").val();
 
-		if( year != null && month != null )
-		{
-			alert(year);
-			alert(month);
-			setTimeout(function(){
-				$.ajax({ //start ajax
-					type: "POST",
-					url: "http://192.168.161.102/api_system/api_del_plan/sum_del_data",
-					data: {
-						'year':year,
-						'month':month
-					},
-					success : function(data){
-						alert("OK!");
-						location.reload();
-					}
-				}); 
-			},500);//end ajax
-		}
-		else if( year != null && month == null )
-		{
-			alert('Please select month!!!');
-		}
-		else
-		{
-			alert('Please select year and month!!!');
-		}
-		// if(name!="" && act!=0 && grp!=0){
-		// 	setTimeout(function(){
-		// 		$.ajax({ //start ajax
-		// 			type: "POST",
-		// 			url: "http://192.168.161.102/ManageMail/Manage_mail/update_data",
-		// 			data: {
-		// 				'name':name,
-		// 				'action':act,
-		// 				'group':grp,
-		// 				'id_edit':id_edit
-		// 			},
-		// 			success : function(data){
-		// 				alert("Data edited successfully !");
-		// 				location.reload();
-		// 			},
-		// 		}); 
-		// 	},500);//end ajax
-		// }else{
-		// 	alert('Please fill all the field !');
-		// 	// $("#btn_submit_add").removeAttr("disabled");
-		// }
-	}
+	// 	if( year != null && month != null )
+	// 	{
+	// 		// alert(year);
+	// 		// alert(month);
+	// 		setTimeout(function(){
+	// 			$.ajax({ //start ajax
+	// 				type: "POST",
+	// 				url: "http://192.168.161.102/excel_gen/Del_plan/del_plan_report",
+	// 				data: {
+	// 					'year':year,
+	// 					'month':month
+	// 				},
+	// 				success : function(data){
+	// 					alert("OK!");
+	// 					location.reload();
+	// 				}
+	// 			}); 
+	// 		},500);//end ajax
+	// 	}
+	// 	else if( year != null && month == null )
+	// 	{
+	// 		alert('Please select month!!!');
+	// 	}
+	// 	else
+	// 	{
+	// 		alert('Please select year and month!!!');
+	// 	}
+	// 	// if(name!="" && act!=0 && grp!=0){
+	// 	// 	setTimeout(function(){
+	// 	// 		$.ajax({ //start ajax
+	// 	// 			type: "POST",
+	// 	// 			url: "http://192.168.161.102/ManageMail/Manage_mail/update_data",
+	// 	// 			data: {
+	// 	// 				'name':name,
+	// 	// 				'action':act,
+	// 	// 				'group':grp,
+	// 	// 				'id_edit':id_edit
+	// 	// 			},
+	// 	// 			success : function(data){
+	// 	// 				alert("Data edited successfully !");
+	// 	// 				location.reload();
+	// 	// 			},
+	// 	// 		}); 
+	// 	// 	},500);//end ajax
+	// 	// }else{
+	// 	// 	alert('Please fill all the field !');
+	// 	// 	// $("#btn_submit_add").removeAttr("disabled");
+	// 	// }
+	// }
 
  </script>
 
